@@ -1,5 +1,5 @@
 
-const contextsModel = require('./contextModel');
+const contextsModel = require('./contextsModel');
 const router = require('express').Router();
 
 router.get('/', (req, res) => {

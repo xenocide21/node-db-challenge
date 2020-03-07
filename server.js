@@ -6,9 +6,9 @@ server.use(express.json())
 server.use(require('helmet')())
 server.use(require('morgan')('common'))
 
-const { router } = require('/api/apiRouter')
+const { router } = require('./api/apiRouter')
 
-server.use('api', router)
+server.use('/api', router)
 
 server.get('/', (req, res) => {
     res.status(200).send('message: Node-DB-Challenge API')

@@ -15,7 +15,7 @@ router.get('/:id', (req, res) => {
     const id = req.params.id;
     prModel.findPrById(id)
         .then( r => {
-            res.status(200).json({ message: `status 200: fetched borrow`, resource: r })
+            res.status(200).json({ message: `status 200: fetched project resource`, resource: r })
         })
         .catch( err => {
             res.status(500).json({ message: `status 500: internal server error, could not fetch project resource` })
